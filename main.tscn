@@ -1,3 +1,10 @@
 [gd_scene format=3 uid="uid://c77mhbli48hrl"]
 
+[ext_resource type="PackedScene" uid="uid://dxmr3wvht44p0" path="res://scenes/critter/critter.tscn" id="1_ig7tw"]
+
 [node name="Main" type="Node2D" unique_id=1835390916]
+
+[node name="Critter" parent="." unique_id=1139180468 instance=ExtResource("1_ig7tw")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2089071433]
+zoom = Vector2(2.5, 2.5)

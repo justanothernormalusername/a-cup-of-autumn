@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://dxmr3wvht44p0"]
+
+[ext_resource type="Script" uid="uid://c0k338fokg40" path="res://scenes/critter/critter.gd" id="1_gdwqs"]
+[ext_resource type="Texture2D" uid="uid://ba5xdifl3i60e" path="res://assets/creatures/junimo.png" id="2_aqb5l"]
+[ext_resource type="Texture2D" uid="uid://d4ehg4aym668d" path="res://assets/misc/thought_bubble.png" id="3_wsfwx"]
+[ext_resource type="Texture2D" uid="uid://b8ash1rbsjqkt" path="res://assets/creatures/godot.svg" id="4_wsfwx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h62h1"]
+radius = 8.0
+
+[node name="Critter" type="CharacterBody2D" unique_id=1139180468]
+script = ExtResource("1_gdwqs")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1528066088]
+position = Vector2(0, -1)
+texture = ExtResource("2_aqb5l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1785356610]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_h62h1")
+
+[node name="ThoughtBubble" type="TextureRect" parent="." unique_id=726116279]
+visible = false
+offset_left = -13.0
+offset_top = -42.000004
+offset_right = 59.972977
+offset_bottom = 30.972988
+scale = Vector2(0.37, 0.37)
+texture = ExtResource("3_wsfwx")
+metadata/_edit_use_anchors_ = true
+
+[node name="ItemIcon" type="TextureRect" parent="ThoughtBubble" unique_id=1813775671]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.07407408
+anchor_top = -0.07407406
+anchor_right = 0.25884286
+anchor_bottom = 0.25884303
+offset_left = 8.108109
+offset_top = 8.108115
+offset_right = 136.10811
+offset_bottom = 136.10811
+scale = Vector2(0.445, 0.445)
+texture = ExtResource("4_wsfwx")
+metadata/_edit_use_anchors_ = true
