@@ -116,8 +116,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8afob"]
-radius = 6.0
-height = 20.0
+radius = 8.0
 
 [node name="Player" type="CharacterBody2D" unique_id=91206633]
 script = ExtResource("1_dovo2")
