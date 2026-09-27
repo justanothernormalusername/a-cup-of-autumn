@@ -3,6 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://cisekm8ptubl8" path="res://assets/creatures/player.png" id="1_8afob"]
 [ext_resource type="Script" uid="uid://btar4ysgkeoc2" path="res://scenes/player/player.gd" id="1_dovo2"]
 [ext_resource type="Texture2D" uid="uid://tpw80684fk8d" path="res://assets/creatures/player_idle_anim.png" id="2_gmlin"]
+[ext_resource type="AudioStream" uid="uid://clho6m7kjtth2" path="res://assets/audio/grass_footsteps.mp3" id="4_lvxji"]
+[ext_resource type="AudioStream" uid="uid://ubmmt7ej3v50" path="res://assets/audio/pickup.mp3" id="5_p47bc"]
+[ext_resource type="AudioStream" uid="uid://1xdgkhl88101" path="res://assets/audio/reward.mp3" id="6_0owmy"]
+[ext_resource type="AudioStream" uid="uid://djwwxbdck87on" path="res://assets/audio/dropitem.mp3" id="7_qek5x"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h17s1"]
 atlas = ExtResource("2_gmlin")
@@ -135,3 +139,17 @@ shape = SubResource("CapsuleShape2D_8afob")
 zoom = Vector2(3, 3)
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0
+
+[node name="Footsteps" type="AudioStreamPlayer" parent="." unique_id=1713301055]
+stream = ExtResource("4_lvxji")
+volume_db = -8.525
+
+[node name="Pickup" type="AudioStreamPlayer" parent="." unique_id=945990444]
+stream = ExtResource("5_p47bc")
+volume_db = -8.525
+
+[node name="Reward" type="AudioStreamPlayer" parent="." unique_id=157853902]
+stream = ExtResource("6_0owmy")
+
+[node name="Drop" type="AudioStreamPlayer" parent="." unique_id=198593828]
+stream = ExtResource("7_qek5x")

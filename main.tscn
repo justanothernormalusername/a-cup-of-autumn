@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://c6excvabhf3f5" path="res://scenes/ui/pointer/pointer.tscn" id="6_7mycd"]
 [ext_resource type="Script" uid="uid://c4aqlmh4c85ke" path="res://scenes/world/world.gd" id="7_5vw27"]
 [ext_resource type="PackedScene" uid="uid://phxcv0tcqpuc" path="res://scenes/ui/inventory/inventory_ui.tscn" id="7_272bh"]
+[ext_resource type="AudioStream" uid="uid://d1bix03bliynp" path="res://assets/audio/background_ambience.mp3" id="8_5vw27"]
+[ext_resource type="PackedScene" uid="uid://b42k2ktcacxen" path="res://scenes/timer/clock.tscn" id="9_kek77"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2yge"]
 texture = ExtResource("2_0xm2m")
@@ -462,3 +464,10 @@ position = Vector2(145, -6)
 
 [node name="Marker2D3" type="Marker2D" parent="World/CritterSpawnPoints" unique_id=1744773458]
 position = Vector2(-72, -253)
+
+[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="." unique_id=1555469482]
+stream = ExtResource("8_5vw27")
+volume_db = -12.661
+autoplay = true
+
+[node name="Clock" parent="." unique_id=1120838696 instance=ExtResource("9_kek77")]

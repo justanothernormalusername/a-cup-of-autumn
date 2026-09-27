@@ -19,7 +19,7 @@ func _init() -> void:
 signal update_inventory()
 
 func add_node(item: Node2D):
-	var display_name = item.DISPLAY_NAME
+	var display_name = item.item_name
 	var inventory_item := get_item(display_name)
 	if inventory_item:
 		inventory_item.add()
