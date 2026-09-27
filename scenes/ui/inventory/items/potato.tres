@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryItem" format=3 uid="uid://cecosjdldgnrk"]
+
+[ext_resource type="Texture2D" uid="uid://dgixkcoplh82j" path="res://assets/map/water.png" id="1_k3816"]
+[ext_resource type="Script" uid="uid://ccxvje5xnalw3" path="res://scenes/ui/inventory/inventory_item.gd" id="1_y70af"]
+
+[resource]
+script = ExtResource("1_y70af")
+DISPLAY_NAME = "Potato"
+ITEM_TEXTURE = ExtResource("1_k3816")
+START_COUNT = 6
+metadata/_custom_type_script = "uid://ccxvje5xnalw3"

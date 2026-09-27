@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dta5b4mna0g6v" path="res://assets/map/hills.png" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://d58o6xa5kqk2" path="res://scenes/player/player.tscn" id="3_h2yge"]
 [ext_resource type="Texture2D" uid="uid://cpscdpto4qhsj" path="res://assets/map/grass_biome.png" id="3_lquwl"]
+[ext_resource type="PackedScene" uid="uid://c6excvabhf3f5" path="res://scenes/ui/pointer/pointer.tscn" id="6_7mycd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2yge"]
 texture = ExtResource("2_0xm2m")
@@ -293,3 +294,8 @@ tile_set = SubResource("TileSet_ig7tw")
 [node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=461351998]
 tile_map_data = PackedByteArray("AAAEAPv/AAABAAAAAAD6//v/AAABAAAAAAD3//z/AAABAAAAAAD9/wIAAAABAAAAAAAIAAIAAAABAAAAAAD3/wQAAAABAAAAAAAIAPz/AAABAAAAAAAFAPz/AAAAAAAAAAAMAPv/AAAAAAAAAAAMAP//AAAAAAAAAAAGAPn/AAAAAAAAAAD2//n/AAAAAAAAAADy//v/AAAAAAAAAADz/wAAAAAAAAAAAAD0//7/AAABAAAAAAD1/wQAAAABAAAAAADz/wYAAAABAAAAAADz/wcAAAABAAAAAAD5/wcAAAABAAAAAAAGAAYAAAABAAAAAAAMAAcAAAABAAAAAAD4/wUAAAAAAAAAAAAKAAYAAAAAAAAAAAABAAYAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_h62h1")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1356825581]
+follow_viewport_enabled = true
+
+[node name="Pointer" parent="CanvasLayer" unique_id=1950941344 instance=ExtResource("6_7mycd")]

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c6excvabhf3f5"]
+
+[ext_resource type="Script" uid="uid://bg0cp77ds2fdp" path="res://scenes/ui/pointer/pointer.gd" id="1_xjd2b"]
+[ext_resource type="Texture2D" uid="uid://b8ash1rbsjqkt" path="res://assets/creatures/godot.svg" id="2_k11nl"]
+
+[node name="Pointer" type="Control" unique_id=1213500487]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xjd2b")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=230352149]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_k11nl")
