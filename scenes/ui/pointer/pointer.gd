@@ -1,8 +1,17 @@
 extends Control
+
+const TARGET_POS := Vector2.ZERO
+const PADDING := 20.0
+
 @onready var texture: TextureRect = $TextureRect
 @onready var viewport: Viewport = get_viewport()
 @onready var active_camera: Camera2D = viewport.get_camera_2d()
-const TARGET_POS := Vector2.ZERO
+
+@onready var top_right_offset := Vector2(viewport.size/2)
+@onready var half_width: float = (viewport.size.x - PADDING)/ 2
+@onready var half_height: float = (viewport.size.y - PADDING)/ 2
+
+@onready var size_offset := texture.size/2
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -13,6 +22,6 @@ func _process(delta: float) -> void:
 	else:
 		show()
 		var direction := (Vector2.ZERO - active_camera.global_position).normalized()
-		var half_width = viewport.size.x / 2
-		var half_height = viewport.size.y / 2
-		texture.position = direction * min(half_width / abs(direction.x), half_height / abs(direction.y))
+		position = direction * min(abs(half_width / direction.x), abs(half_height / direction.y)) + top_right_offset - size_offset
+		texture.rotation = direction.angle()
+		

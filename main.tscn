@@ -296,6 +296,6 @@ tile_map_data = PackedByteArray("AAAEAPv/AAABAAAAAAD6//v/AAABAAAAAAD3//z/AAABAAA
 tile_set = SubResource("TileSet_h62h1")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1356825581]
-follow_viewport_enabled = true
 
 [node name="Pointer" parent="CanvasLayer" unique_id=1950941344 instance=ExtResource("6_7mycd")]
+visible = false
