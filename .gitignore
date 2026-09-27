@@ -1,4 +1,16 @@
+# Godot 4.2+ specific ignores
+~*.dll
+
 # Godot 4+ specific ignores
 .godot/
 /android/
+.nomedia
+
+# Godot-specific ignores
+.import/
+export.cfg
+export_credentials.cfg
+*.tmp
+
+# Additional ignores
 addons/
