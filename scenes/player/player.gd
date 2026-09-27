@@ -6,6 +6,8 @@ var screen_size
 var hovered_item = null
 var held_item = null
 
+const ITEM_SCENE = preload("res://scenes/item/item.tscn")
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	screen_size = get_viewport_rect().size
@@ -42,12 +44,23 @@ func _process(delta: float) -> void:
 				held_item.queue_free()
 				held_item = null
 				hovered_item.queue_free()
+		
+		elif hovered_item is Pot and self.position.distance_to(hovered_item.position) <= 32:
+			if held_item and hovered_item.requested_item == held_item.item_name:
+				hovered_item.interact_with_item(held_item.item_name)
+				held_item.queue_free()
+				held_item = null
+		
 				
 	if Input.is_action_just_pressed("ui_accept") and held_item != null:
-		held_item.position = self.position + Vector2(32, 0) * (-1 if $AnimatedSprite2D.flip_h else 1)
-		held_item.collision_shape.disabled = false
-		held_item = null
-	
+		hold()
+
+func hold() -> void:
+	held_item.position = self.position + Vector2(32, 0) * (-1 if $AnimatedSprite2D.flip_h else 1)
+	held_item.collision_shape.disabled = false
+	held_item = null
+
+
 func update_hover():
 	var world_mouse_pos = get_global_mouse_position()
 	var space_state = get_world_2d().direct_space_state
