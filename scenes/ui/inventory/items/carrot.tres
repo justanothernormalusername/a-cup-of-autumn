@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryItem" format=3 uid="uid://b3fr7featvnna"]
+
+[ext_resource type="Script" uid="uid://ccxvje5xnalw3" path="res://scenes/ui/inventory/inventory_item.gd" id="1_3x2oa"]
+[ext_resource type="Texture2D" uid="uid://b8ash1rbsjqkt" path="res://assets/creatures/godot.svg" id="1_d53sv"]
+
+[resource]
+script = ExtResource("1_3x2oa")
+DISPLAY_NAME = "Carrot"
+ITEM_TEXTURE = ExtResource("1_d53sv")
+START_COUNT = 2
+metadata/_custom_type_script = "uid://ccxvje5xnalw3"

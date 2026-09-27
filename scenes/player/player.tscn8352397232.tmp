@@ -121,6 +121,7 @@ height = 20.0
 
 [node name="Player" type="CharacterBody2D" unique_id=91206633]
 script = ExtResource("1_dovo2")
+SPEED = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1293298772]
 sprite_frames = SubResource("SpriteFrames_h62h1")
@@ -130,8 +131,3 @@ frame_progress = 0.6107737
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=465606601]
 shape = SubResource("CapsuleShape2D_8afob")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1638436388]
-zoom = Vector2(3, 3)
-position_smoothing_enabled = true
-position_smoothing_speed = 3.0

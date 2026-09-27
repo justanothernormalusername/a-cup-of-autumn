@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cmlecpyk470rs"]
+
+[ext_resource type="Script" uid="uid://cs7666jnvdocc" path="res://scenes/item/item.gd" id="1_vcqat"]
+[ext_resource type="Texture2D" uid="uid://b8ash1rbsjqkt" path="res://assets/creatures/godot.svg" id="2_vijbe"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h62h1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vu0ti"]
+radius = 17.117243
+
+[node name="Item" type="StaticBody2D" unique_id=116120380]
+script = ExtResource("1_vcqat")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1672228428]
+scale = Vector2(0.15039064, 0.15039064)
+texture = ExtResource("2_vijbe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=285601423]
+shape = SubResource("CircleShape2D_h62h1")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=644327660]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=869636645]
+shape = SubResource("CircleShape2D_vu0ti")
+debug_color = Color(0.9706941, 0, 0.44276208, 0.41960785)
