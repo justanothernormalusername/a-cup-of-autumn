@@ -1,7 +1,6 @@
 class_name InventoryItem
 extends Resource
 
-static var instantiated_items: Array[String] = []
 @export var DISPLAY_NAME: String
 @export var ITEM_TEXTURE: Texture2D
 @export var ITEM_OBJECT: PackedScene
@@ -26,9 +25,6 @@ func add(add_num: int = 1):
 	#else:
 		#push_error("Number of ", DISPLAY_NAME, " is <= 0")
 		#return null
-	
-static func is_instantiated(name: String) -> bool:
-	return name in instantiated_items
 
 func _to_string() -> String:
 	return str(num) + " " + DISPLAY_NAME

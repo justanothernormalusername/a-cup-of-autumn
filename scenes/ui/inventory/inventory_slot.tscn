@@ -4,12 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://b8ash1rbsjqkt" path="res://assets/creatures/godot.svg" id="1_nktrt"]
 
 [node name="InventorySlot" type="Panel" unique_id=1379160107]
-modulate = Color(1, 1, 1, 0.5019608)
 self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(50, 50)
 anchors_preset = -1
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 50.0
+offset_bottom = 50.0
 mouse_filter = 1
 script = ExtResource("1_hwg0l")
 
@@ -55,3 +54,6 @@ grow_horizontal = 0
 grow_vertical = 0
 mouse_filter = 2
 autowrap_mode = 0
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

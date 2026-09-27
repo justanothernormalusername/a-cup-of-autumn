@@ -18,6 +18,7 @@ config/icon="res://assets/creatures/godot.svg"
 [autoload]
 
 Globals="*uid://co5qww17g64h3"
+Inventory="*uid://52ovxbseopnj"
 
 [display]
 

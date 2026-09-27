@@ -1,17 +1,16 @@
 [gd_scene format=3 uid="uid://phxcv0tcqpuc"]
 
-[ext_resource type="Script" uid="uid://c1uoxt1r6suxc" path="res://scenes/ui/inventory/inventory.gd" id="1_xce7s"]
-[ext_resource type="Texture2D" uid="uid://dgixkcoplh82j" path="res://assets/map/water.png" id="2_pefhr"]
+[ext_resource type="Script" uid="uid://c1uoxt1r6suxc" path="res://scenes/ui/inventory/inventory_ui.gd" id="1_a0on1"]
+[ext_resource type="Texture2D" uid="uid://dgixkcoplh82j" path="res://assets/map/water.png" id="2_8pb6k"]
 
-[node name="Inventory" type="Control" unique_id=751327466]
+[node name="InventoryUI" type="Control" unique_id=751327466]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_xce7s")
-ITEMS_PATH = null
+script = ExtResource("1_a0on1")
 
 [node name="RightPanel" type="MarginContainer" parent="." unique_id=148440084]
 custom_minimum_size = Vector2(250, 0)
@@ -34,7 +33,7 @@ custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 3
-texture = ExtResource("2_pefhr")
+texture = ExtResource("2_8pb6k")
 expand_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="RightPanel" unique_id=1594340306]
