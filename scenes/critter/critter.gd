@@ -8,25 +8,13 @@ class_name Critter
 var nickname: String = "Pip"
 var requested_item: String = ""
 
-var available_items: Array[Dictionary] = [
-	{
-		"name": "Boba",
-		"texture": preload("res://assets/items/boba.png")
-	},
-	{
-		"name": "Cannibalism",
-		"texture": preload("res://assets/creatures/junimo.png")
-	}
-]
-
 func _ready() -> void:
 	sprite.modulate = Color(randf(), randf(), randf())
-	generate_random_request()
 	
 func _process(delta: float) -> void:
 	pass
 	
-func generate_random_request() -> void:
+func generate_random_request(available_items) -> void:
 	var random_item = available_items.pick_random()
 	requested_item = random_item["name"]
 	item_icon.texture = random_item["texture"]
