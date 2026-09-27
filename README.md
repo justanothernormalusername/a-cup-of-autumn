@@ -6,13 +6,13 @@ You are The Root Giver. Critters emerge from the forest seeking roots, and it’
 
 
 
-\* \*\*WASD\*\* — Move
+\*\*WASD\*\* — Move
 
-\* \*\*Mouse\*\* — Hover over item
+\*\*Mouse\*\* — Hover over item
 
-\* \*\*Left Click/E\*\* — Interact / Pick up roots
+\*\*Left Click/E\*\* — Interact / Pick up roots
 
-\* \*\*Space\*\* — Drop item
+\*\*Space\*\* — Drop item
 
 
 
@@ -20,9 +20,9 @@ You are The Root Giver. Critters emerge from the forest seeking roots, and it’
 
 
 
-\* \*\*Tileset (Recolored)\*\* — https://cupnooble.itch.io/sprout-lands-asset-pack
+\*\*Tileset (Recolored)\*\* — https://cupnooble.itch.io/sprout-lands-asset-pack
 
-\* \*\*Sound/Music\*\* — https://pixabay.com/music/search/
+\*\*Sound/Music\*\* — https://pixabay.com/music/search/
 
-\* \*\*@ProbablyADoor (Github)\*\* — Player Sprite, Clock Sprite
+\*\*@ProbablyADoor (Github)\*\* — Player Sprite, Clock Sprite
 
