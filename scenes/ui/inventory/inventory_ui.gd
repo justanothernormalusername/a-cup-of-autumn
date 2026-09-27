@@ -31,11 +31,9 @@ func update() -> void:
 # Additional argument Slot bound to function
 func _on_gui_input(event: InputEvent, slot: InventorySlot) -> void:
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MouseButton.MOUSE_BUTTON_LEFT:
-		#var node: Item = slot.ITEM.spawn(mouse_pos)
-		#get_parent().add_sibling(node)
-		#update()
-		print(slot, " clicked")
-		pass  # Implement item dropping/placing later
+		Inventory.selected_item = slot.display_item
+		Globals.deselect_slots.emit()
+		slot.select()
 
 func visibility(state: bool) -> void:
 	visible = state

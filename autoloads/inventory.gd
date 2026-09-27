@@ -3,6 +3,8 @@ extends Node
 @export var ITEMS_PATH := "res://scenes/ui/inventory/items/"
 var inventory_items: Dictionary[String, InventoryItem]
 
+var selected_item: InventoryItem
+
 func _init() -> void:
 	for file_name in DirAccess.get_files_at(ITEMS_PATH):
 		var inventory_item: InventoryItem = load(ITEMS_PATH.path_join(file_name))

@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d58o6xa5kqk2" path="res://scenes/player/player.tscn" id="3_h2yge"]
 [ext_resource type="Texture2D" uid="uid://cpscdpto4qhsj" path="res://assets/map/grass_biome.png" id="3_lquwl"]
 [ext_resource type="PackedScene" uid="uid://c6excvabhf3f5" path="res://scenes/ui/pointer/pointer.tscn" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://phxcv0tcqpuc" path="res://scenes/ui/inventory/inventory_ui.tscn" id="7_272bh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2yge"]
 texture = ExtResource("2_0xm2m")
@@ -299,3 +300,5 @@ tile_set = SubResource("TileSet_h62h1")
 
 [node name="Pointer" parent="CanvasLayer" unique_id=1950941344 instance=ExtResource("6_7mycd")]
 visible = false
+
+[node name="InventoryUI" parent="CanvasLayer" unique_id=751327466 instance=ExtResource("7_272bh")]
