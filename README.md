@@ -3,6 +3,7 @@
 # The Root Giver
 
 You are The Root Giver. Critters emerge from the forest seeking roots, and it’s your job to forage, gather, and deliver the roots they need. Explore the forest, collect roots, and keep the critters happy.
+<br>
 Play here: https://friedkernel.itch.io/the-root-giver
 
 \### Controls
