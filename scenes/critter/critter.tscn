@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dxmr3wvht44p0"]
 
 [ext_resource type="Script" uid="uid://c0k338fokg40" path="res://scenes/critter/critter.gd" id="1_gdwqs"]
-[ext_resource type="Texture2D" uid="uid://ba5xdifl3i60e" path="res://assets/creatures/junimo.png" id="2_aqb5l"]
+[ext_resource type="Texture2D" uid="uid://cvnsnme5podh" path="res://assets/creatures/acron (1).png" id="2_wsfwx"]
 [ext_resource type="Texture2D" uid="uid://d4ehg4aym668d" path="res://assets/misc/thought_bubble.png" id="3_wsfwx"]
 [ext_resource type="Texture2D" uid="uid://b8ash1rbsjqkt" path="res://assets/creatures/godot.svg" id="4_wsfwx"]
 
@@ -14,7 +14,7 @@ script = ExtResource("1_gdwqs")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1528066088]
 position = Vector2(-4.7683716e-07, 0)
 scale = Vector2(0.65625, 0.65625)
-texture = ExtResource("2_aqb5l")
+texture = ExtResource("2_wsfwx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1785356610]
 position = Vector2(0, 1)
