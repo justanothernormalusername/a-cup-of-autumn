@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://b42k2ktcacxen"]
+
+[ext_resource type="Script" uid="uid://dg80dqmi7t23t" path="res://scenes/timer/daynightcycle.gd" id="1_t2y8u"]
+[ext_resource type="Script" uid="uid://csdpal8tr03is" path="res://scenes/timer/clock_scene.gd" id="1_xuher"]
+[ext_resource type="Script" uid="uid://yp7q3j6mdxex" path="res://scenes/timer/clock_gui.gd" id="3_wvxvp"]
+[ext_resource type="Texture2D" uid="uid://dmc7qonxnrywd" path="res://assets/misc/timerbg.png" id="4_5ovtx"]
+[ext_resource type="FontFile" uid="uid://voftkhi22ifl" path="res://assets/fonts/Virtupetpixies-7O3GV.ttf" id="5_n0be8"]
+[ext_resource type="Texture2D" uid="uid://bel4wnf3yh0wa" path="res://assets/misc/hourglass_icon.png" id="6_5ovtx"]
+
+[sub_resource type="Gradient" id="Gradient_wvxvp"]
+offsets = PackedFloat32Array(0.017621145, 0.21145375, 0.3876652, 0.5726872, 1)
+colors = PackedColorArray(0.15025431, 0.1262992, 0.30460474, 1, 0.18418927, 0.13319016, 0.31963757, 1, 0.44112542, 0.18536448, 0.4334574, 1, 0.77463925, 0.4969136, 0.41564792, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ppyta"]
+gradient = SubResource("Gradient_wvxvp")
+
+[sub_resource type="LabelSettings" id="LabelSettings_wvxvp"]
+font = ExtResource("5_n0be8")
+font_size = 56
+font_color = Color(0.50970525, 0.17715779, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5ovtx"]
+font = ExtResource("5_n0be8")
+font_size = 52
+font_color = Color(0.50980395, 0.1764706, 0, 1)
+
+[node name="Clock" type="Node2D" unique_id=1120838696]
+script = ExtResource("1_xuher")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=506631310]
+script = ExtResource("1_t2y8u")
+gradient_texture = SubResource("GradientTexture1D_ppyta")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=352072884]
+
+[node name="ClockGui" type="Control" parent="CanvasLayer" unique_id=381643163]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_wvxvp")
+
+[node name="Sprite2D2" type="Sprite2D" parent="CanvasLayer/ClockGui" unique_id=595359401]
+position = Vector2(101, 82)
+scale = Vector2(6.3125, 6.3125)
+texture = ExtResource("4_5ovtx")
+
+[node name="TimeLabel" type="Label" parent="CanvasLayer/ClockGui" unique_id=20801151]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 15.0
+offset_right = 162.0
+offset_bottom = 66.0
+text = "21:59 PM"
+label_settings = SubResource("LabelSettings_wvxvp")
+
+[node name="DayLabel" type="Label" parent="CanvasLayer/ClockGui" unique_id=1445199285]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 82.0
+offset_right = 160.0
+offset_bottom = 121.0
+text = "Day ???"
+label_settings = SubResource("LabelSettings_5ovtx")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ClockGui" unique_id=2104753855]
+position = Vector2(167, 41.999996)
+scale = Vector2(2.648437, 2.648437)
+texture = ExtResource("6_5ovtx")
